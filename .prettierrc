@@ -8,7 +8,7 @@
     "^react/*(.*)$",
     "^@/types/(.*)$",
     "^@/features/(.*)$",
-    "^@/database/(.*)$",
+    "^@/drizzle/(.*)$",
     "^@/lib/(.*)$",
     "^@/config/(.*)$",
     "^@/context/(.*)$",
