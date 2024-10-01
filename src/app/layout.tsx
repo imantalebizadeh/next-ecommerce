@@ -1,5 +1,7 @@
 import { Vazirmatn } from "next/font/google";
 
+import { TRPCProvider } from "@/server/trpc/client";
+
 import "@/styles/globals.css";
 
 const vazirmatn = Vazirmatn({
@@ -17,7 +19,7 @@ export default function SharedLayout({
   return (
     <html lang="fa-IR" dir="rtl">
       <body className={`${vazirmatn.variable} font-sans antialiased`}>
-        {children}
+        <TRPCProvider>{children}</TRPCProvider>
       </body>
     </html>
   );
