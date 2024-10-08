@@ -11,8 +11,8 @@
     "db:migrate": "node --import tsx --env-file .env src/server/db/migrate.ts"
   },
   "dependencies": {
+    "@auth/drizzle-adapter": "^1.6.1",
     "@hookform/resolvers": "^3.9.0",
-    "@lucia-auth/adapter-drizzle": "^1.1.0",
     "@next/env": "^14.2.14",
     "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-separator": "^1.1.0",
@@ -27,9 +27,9 @@
     "clsx": "^2.1.1",
     "drizzle-orm": "^0.33.0",
     "input-otp": "^1.2.4",
-    "lucia": "^3.2.0",
     "lucide-react": "^0.445.0",
     "next": "14.2.14",
+    "next-auth": "5.0.0-beta.22",
     "postgres": "^3.4.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
