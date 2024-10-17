@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Vazirmatn } from "next/font/google";
+
+import { cn } from "@/lib/utils";
+
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const vazirmatn = Vazirmatn({
+  subsets: ["latin"],
+  weight: "variable",
+  variable: "--font-vazirmatn",
 });
 
 export const metadata: Metadata = {
@@ -24,10 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="fa" dir="rtl">
+      <body className={cn(vazirmatn.variable, "font-vazirmatn")}>
         {children}
       </body>
     </html>
